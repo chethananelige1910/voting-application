@@ -15,7 +15,7 @@ const {
   Elections,
   ElectionAdmin,
   Vote,
-} = require("../models");
+} = require("./models");
 const saltRounds = 10;
 
 const app = express();
@@ -1040,8 +1040,5 @@ app.get(
     }
   }
 );
-
-app.use("/admin", require("./routes/electionAdmin"));
-app.use("/voter", require("./routes/voter"));
 
 module.exports = app;
